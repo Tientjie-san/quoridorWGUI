@@ -1,0 +1,12 @@
+    - Game States
+    - Convert input text to gamestates
+    - step through gamestates
+- Walls in board
+    - List of moves with current player
+- Logic how sidebar and board behave on different screen dimensions
+    - Modal to add moves
+    - Amount of walls left
+- Show error message when starting game without entering moves
+- Highlight last moves
+- Display grid labels on the side
+- Allow moves in the pannel to be clickable to instantly go to position

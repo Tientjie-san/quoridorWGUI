@@ -1,0 +1,62 @@
+:root {
+	--board-width: 80vmin;
+	--rounding: 3px;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	background: #222;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+    background-color: #272727;
+    border: none;
+    border-radius: var(--rounding);
+    font-size: 1.5em;
+    color: #9e9e9e;
+	padding: 5px;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:hover {
+    background-color: #373737;
+    color: lightgray;
+}
+
+button:focus {
+	border-color: #666;
+}
