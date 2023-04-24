@@ -6,6 +6,7 @@
     const rows = [9, 8, 7, 6, 5, 4, 3, 2, 1];
     const cols = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
     const showLabels = false;
+    const showWalls = true;
 </script>
 
 <div class="board">
@@ -26,7 +27,7 @@
                 <div class="wall-slot vertical">
                     {#if walls.includes(col + (row - 1) + "v") || walls.includes(col + row + "v")}
                         <div class="wall">
-                            {#if showLabels}
+                            {#if showWalls}
                                 <p class="label">{col}{row}</p>
                             {/if}
                         </div>
@@ -40,7 +41,7 @@
                     <div class="wall-slot horizontal">
                         {#if walls.includes(col + (row - 1) + "h") || walls.includes(cols[idx_c - 1] + (row - 1) + "h")}
                             <div class="wall">
-                                {#if showLabels}
+                                {#if showWalls}
                                     <p class="label">{col}{row - 1}</p>
                                 {/if}
                             </div>
@@ -49,7 +50,7 @@
                     <div class="wall-slot inbetween">
                         {#if walls.includes(col + (row - 1) + "h") || walls.includes(col + (row - 1) + "v")}
                             <div class="wall">
-                                {#if showLabels}
+                                {#if showWalls}
                                     <p class="label">{col}{row - 1}</p>
                                 {/if}
                             </div>
@@ -59,7 +60,7 @@
                     <div class="wall-slot horizontal">
                         {#if walls.includes(col + (row - 1) + "h") || walls.includes(cols[idx_c - 1] + (row - 1) + "h")}
                             <div class="wall">
-                                {#if showLabels}
+                                {#if showWalls}
                                     <p class="label">{col}{row - 1}</p>
                                 {/if}
                             </div>
