@@ -6,14 +6,16 @@
     const dispatch = createEventDispatcher();
 
     function startGame(notationString) {
+        if(notationString === undefined) return;
         let notationCleaned = notationString;
+        console.log(notationString);
         if (notationString.substring(notationString.length - 1) === ",") {
             notationCleaned = notationString.substring(
                 0,
                 notationString.length - 1
             );
         }
-        dispatch("start_game", notationCleaned.split(", "));
+        dispatch("start_game", notationCleaned.split("/"));
     }
     function controlGame(steps) {
         dispatch("game_step", steps);
@@ -78,7 +80,7 @@
                 id="game-notation-input"
                 rows="50"
                 bind:value
-                placeholder="Example: e2, e8, e3, e7, d2h, d8v"
+                placeholder="Example PGN: e2/e8/e3/e7/d2h/d8v"
             />
         </div>
     {/if}
