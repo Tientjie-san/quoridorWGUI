@@ -12,8 +12,10 @@ To use localy:
 
 Install the dependencies...
 
+Go inside the root folder quoridor WGUI
+
 ```bash
-cd quoridor
+
 npm install
 ```
 
